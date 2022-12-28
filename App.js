@@ -14,24 +14,10 @@ import styles from './android/app/src/styles/style';
 import {SafeAreaView} from 'react-native';
 import {Image} from 'react-native';
 import {ReactSVG} from 'react';
+import HomeScreen from './android/app/src/pages/home/home';
 const customer = require('./android/app/src/main/assets/images/customer.png');
 
-function HomeScreen({navigation}) {
-  return (
-    <View
-      style={{
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'black',
-      }}>
-      <Button
-        onPress={() => navigation.navigate('Notifications')}
-        title="Go to notifications"
-      />
-    </View>
-  );
-}
+
 
 function ProfileScreen({navigation}) {
   return (
@@ -250,10 +236,12 @@ function DrawerMenu({navigation}) {
 const Drawer = createDrawerNavigator();
 
 export default function App() {
+  var BasketImg =  require('./android/app/src/main/assets/images/check.png');
+
   return (
     <NavigationContainer theme={MyTheme}>
       <Drawer.Navigator initialRouteName="Home" drawerContent={DrawerMenu}>
-        <Drawer.Screen name="Home" component={HomeScreen} />
+        <Drawer.Screen name="Home" component={HomeScreen} options={{title : "Deliver to Home" , headerStyle : {backgroundColor : '#fff'} , headerRight : ()=> (<Image source={BasketImg} style={{width : 25 , height : 25 , marginRight : 20 , opacity : 0.7}} ></Image> ) }} />
         <Drawer.Screen name="Profile Screen" component={ProfileScreen} />
         <Drawer.Screen name="Payment Screen" component={PaymentScreen} />
         <Drawer.Screen name="Order Screen" component={OrderScreen} />

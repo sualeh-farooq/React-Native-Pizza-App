@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     // borderWidth: 2,
     alignContent: 'center',
     alignItems: 'center',
-    marginTop : 15
+    marginTop: 15,
   },
 
   customerImgBack: {
@@ -36,43 +36,122 @@ const styles = StyleSheet.create({
   customerName: {
     color: '#6D6E9C',
     fontSize: 20,
-    fontWeight : 'bold'
+    fontWeight: 'bold',
   },
-  customerEmail : {
-    color : '#A0A8CC',
-    fontSize : 15
+  customerEmail: {
+    color: '#A0A8CC',
+    fontSize: 15,
   },
-  drawerList : {
-    flexDirection : 'column',
-    justifyContent : 'center',
-    alignContent : 'center',
+  drawerList: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignContent: 'center',
     alignItems: 'center',
     // borderColor : 'black',
     // borderWidth : 2,
   },
-  profileIcon : {
-    width : 30,
-    height : 20,
-
+  profileIcon: {
+    width: 30,
+    height: 20,
   },
-  profileText : {
-    color: "#6D6E9C", 
-    fontWeight : '400',
-    fontSize : 15 ,
-    marginLeft : 40,
+  profileText: {
+    color: '#6D6E9C',
+    fontWeight: '400',
+    fontSize: 15,
+    marginLeft: 40,
   },
-  drawerListOne : {
-    flexDirection : 'row',
+  drawerListOne: {
+    flexDirection: 'row',
     // justifyContent : 'space-around',
-    marginTop : 20,
+    marginTop: 20,
     // paddingLeft : 30,
     // paddingRight : 30,
     // marginLeft : -50,
     // borderColor : 'black',
     // borderWidth : 2,
-    width  : 200,
-    padding : 3
+    width: 200,
+    padding: 3,
     // paddingRight : 30
+  },
+
+  homeMainBg: {
+    flex: 1,
+    // alignItems: 'center',
+    // justifyContent: 'center',
+    backgroundColor: 'white',
+    // flexDirection : 'row'
+  },
+  greetContainer : {
+    flex : 1,
+    backgroundColor : 'red',
+    width : 100,
+    height : 20,
+  }, 
+  linearGradient: {
+    // paddingLeft: 15,
+    // paddingRight: 15,
+    // borderRadius: 5,
+    width: 500 ,
+    // borderWidth : 2,
+    // borderColor : 'red',
+    // flex : 1, 
+    height : 130
+
+  },
+  blurCard : {
+    backgroundColor : 'rgba(255, 255, 255, 0.8)',
+    borderRadius : 25,
+    width : 320, 
+    height : 200 , 
+    marginTop : -280, 
+    flexDirection : 'row',
+  },
+  crustCon : {
+    display : 'flex',
+    justifyContent : 'center',
+  },
+  crustConData : {
+    // borderWidth : 2, 
+    // borderColor : 'red',
+    marginLeft : -45,
+    padding : 5,
+  },
+  cartBtn : {
+
+  } ,
+  cartGradient : {
+    width : 120,
+    height :30,
+    marginTop : 15,
+    borderRadius : 20,
+    justifyContent : 'center',
+    alignContent : 'center',
+    alignContent : 'center',
+    textAlign : 'center',
+  },
+  elevation: {
+    elevation: 2,
+    shadowColor: '#000',
+    shadowOpacity: 0.7
+  },
+  blurCard2 : {
+    backgroundColor : 'rgba(255, 255, 255, 0.1)',
+    borderTopRightRadius : 25,
+    borderTopLeftRadius : 25,
+    width : 320, 
+    height : 270 , 
+    marginTop : -250, 
+    flexDirection : 'column',
+    alignContent : 'center',
+    // justifyContent : 'center',
+    alignSelf : 'center',
+    padding : 5
+  },
+  elevation2: {
+    elevation: 1,
+    shadowColor: '#FFAA6C',
+    shadowOpacity: 0.1,
+    shadowOffset :10
   }
 });
 
