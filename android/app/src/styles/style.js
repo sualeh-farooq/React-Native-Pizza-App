@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     flex: 1,
     // alignItems: 'center',
     // justifyContent: 'center',
-    backgroundColor: 'white',
+    backgroundColor: '#eae9ef',
     // flexDirection : 'row'
   },
   greetContainer : {
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.7
   },
   blurCard2 : {
-    backgroundColor : 'rgba(255, 255, 255, 0.1)',
+    backgroundColor : 'white',
     borderTopRightRadius : 25,
     borderTopLeftRadius : 25,
     width : 320, 
@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     alignContent : 'center',
     // justifyContent : 'center',
     alignSelf : 'center',
-    padding : 5
+    padding : 5,  
   },
   elevation2: {
     elevation: 1,

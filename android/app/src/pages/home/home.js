@@ -118,7 +118,7 @@ function HomeScreen({navigation}) {
               {/* Bottom Pizza Div */}
 
       <View style={{justifyContent : 'center' , alignContent : 'center' , alignSelf : 'center'}} >
-        <View style={[styles.blurCard2 , styles.elevation]}>
+        <View style={styles.blurCard2}>
             <Text 
             style={{
                 textAlign : 'center',
@@ -136,9 +136,9 @@ function HomeScreen({navigation}) {
             <Image  style ={{
 
                 marginRight : 100,
-                height : 225,
-                marginLeft : 5,
-                width : 300
+                height : 250,
+                marginLeft : -20,
+                width : 350
             }}
             
             source={createPizza}/>
