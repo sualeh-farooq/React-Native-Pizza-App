@@ -15,6 +15,7 @@ import {SafeAreaView} from 'react-native';
 import {Image} from 'react-native';
 import {ReactSVG} from 'react';
 import HomeScreen from './android/app/src/pages/home/home';
+import AddressScreen from './android/app/src/pages/address/address';
 const customer = require('./android/app/src/main/assets/images/customer.png');
 
 
@@ -43,13 +44,7 @@ function OrderScreen({navigation}) {
   );
 }
 
-function AddressScreen({navigation}) {
-  return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Button onPress={() => navigation.goBack()} title="Go back home" />
-    </View>
-  );
-}
+
 
 function HelpScreen({navigation}) {
   return (
@@ -94,7 +89,7 @@ function DrawerMenu({navigation}) {
                 width: 25,
               }}></Image>
             <Text
-              onPress={() => navigation.navigate('Profile Screen')}
+              onPress={() => navigation.navigate('Home')}
               style={{
                 color: '#6D6E9C',
                 fontWeight: '400',
@@ -150,7 +145,7 @@ function DrawerMenu({navigation}) {
                 width: 25,
               }}></Image>
             <Text
-              onPress={() => navigation.navigate('Address Screen')}
+              onPress={() => navigation.navigate('Address')}
               style={{
                 color: '#6D6E9C',
                 fontWeight: '400',
@@ -190,7 +185,7 @@ function DrawerMenu({navigation}) {
                 width: 25,
               }}></Image>
             <Text
-              onPress={() => navigation.navigate('Address Screen')}
+              onPress={() => navigation.navigate('Address')}
               style={{
                 color: '#6D6E9C',
                 fontWeight: '400',
@@ -217,7 +212,7 @@ function DrawerMenu({navigation}) {
                 marginTop: 4,
               }}></Image>
             <Text
-              onPress={() => navigation.navigate('Address Screen')}
+              onPress={() => navigation.navigate('Address')}
               style={{
                 color: '#6D6E9C',
                 fontWeight: '400',
@@ -240,12 +235,12 @@ export default function App() {
 
   return (
     <NavigationContainer theme={MyTheme}>
-      <Drawer.Navigator initialRouteName="Home" drawerContent={DrawerMenu}>
+      <Drawer.Navigator initialRouteName="Address" drawerContent={DrawerMenu}>
         <Drawer.Screen name="Home" component={HomeScreen} options={{title : "Deliver to Home" , headerStyle : {backgroundColor : '#fff'} , headerRight : ()=> (<Image source={BasketImg} style={{width : 25 , height : 25 , marginRight : 20 , opacity : 0.7}} ></Image> ) }} />
+        <Drawer.Screen name="Address" component={AddressScreen} options={{title : "Address Details" , headerStyle : {backgroundColor : '#fff'} , headerRight : ()=> (<Image source={BasketImg} style={{width : 25 , height : 25 , marginRight : 20 , opacity : 0.7}} ></Image> ) }} />
         <Drawer.Screen name="Profile Screen" component={ProfileScreen} />
         <Drawer.Screen name="Payment Screen" component={PaymentScreen} />
         <Drawer.Screen name="Order Screen" component={OrderScreen} />
-        <Drawer.Screen name="Address Screen" component={AddressScreen} />
         <Drawer.Screen name="Help Screen" component={HelpScreen} />
       </Drawer.Navigator>
     </NavigationContainer>
