@@ -235,7 +235,7 @@ export default function App() {
   var homeImg = require('./android/app/src/main/assets/images/homehead.png');
   return (
     <NavigationContainer theme={MyTheme}>
-      <Drawer.Navigator initialRouteName="History" drawerContent={DrawerMenu}>
+      <Drawer.Navigator initialRouteName="Home" drawerContent={DrawerMenu}>
         <Drawer.Screen name="Home" component={HomeScreen} options={{title : "Deliver to Home" , headerStyle : {backgroundColor : '#fff'} , headerRight : ()=> (<Image source={BasketImg} style={{width : 25 , height : 25 , marginRight : 20 , opacity : 0.7}} ></Image> ) }} />
         <Drawer.Screen name="Address" component={AddressScreen} options={{title : "Address Details" , headerStyle : {backgroundColor : '#fff'} , headerRight : ()=> (<Image source={BasketImg} style={{width : 25 , height : 25 , marginRight : 20 , opacity : 0.7}} ></Image> ) }} />
         <Drawer.Screen name="Profile Screen" component={ProfileScreen} />

@@ -10,9 +10,18 @@ export default function OrderHistory({navigation}) {
   const payment = require('../../main/assets/images/payment.png');
   const visa = require('../../main/assets/images/visa.png');
   const detail = require('../../main/assets/images/orderDetail.png');
-  
+  const orderconfirm = require('../../main/assets/images/orderconfirm.png');
+  const prepare = require('../../main/assets/images/prepare.png');
+  const transit = require('../../main/assets/images/transit.png');
+  const deliver = require('../../main/assets/images/deliver.png');
+  const cashback = require('../../main/assets/images/cashback.png');
+  const ahead = require('../../main/assets/images/ahead.png');
 
-  
+
+
+
+
+
   return (
     <View style={styles.homeMainBg}>
       <LinearGradient
@@ -30,7 +39,7 @@ export default function OrderHistory({navigation}) {
             marginTop: 20,
             marginLeft: -10,
           }}>
-          <Image style={{width : 40 , height : 40}} source={detail} />
+          <Image style={{width: 40, height: 40}} source={detail} />
           <Text
             style={{
               color: 'white',
@@ -59,197 +68,78 @@ export default function OrderHistory({navigation}) {
               style={{
                 flexDirection: 'row',
                 // borderWidth: 2,
-                width: '80%',
+                width: '100%',
                 marginTop: 50,
-                padding : 2
+                justifyContent : 'center',
+                paddingBottom : 2,
+                borderBottomWidth :0.5
+                // padding: 2,
+                // marginLeft : -20
               }}>
-              <Image style={{width: 23, height : 25}} source={locationImg} />
-              <Text
-                style={{
-                  fontWeight: 'bold',
-                  color: '#F5313F',
-                  fontSize: 25,
-                  marginLeft: 10,
-                }}>
-                Delivery Address
-              </Text>
-              <Image style={{width: 30, height : 30 , borderRadius : 15 , marginLeft : 40}} source={editImg} />
-
+                <View style={{   width : 100, alignItems : 'center' }}>
+                  <Text  style={{ color : '#6D6E9C', fontSize : 15 , fontWeight : '400' }}>ORDERED ON</Text>
+                  <Text  style={{ color : '#F5313F', fontSize : 22 , fontWeight : '800' }}>28 Dec</Text>
+                </View>
+                <View style={{   width : 100, alignItems : 'center' }}>
+                  <Text  style={{ color : '#6D6E9C', fontSize : 15 , fontWeight : '400' }}>INVOICE #</Text>
+                  <Text  style={{ color : '#F5313F', fontSize : 22 , fontWeight : '800' }}>#15569</Text>
+                </View>
+                <View style={{  width : 100, alignItems : 'center' }}>
+                  <Text  style={{ color : '#6D6E9C', fontSize : 15 , fontWeight : '400' }}>TOTAL DUE</Text>
+                  <Text  style={{ color : '#F5313F', fontSize : 22 , fontWeight : '800' }}>$20.00</Text>
+                </View>
             </View>
             <View
               style={{
                 flexDirection: 'column',
                 // borderWidth: 2,
                 width: '80%',
-                marginTop: 10,
-                padding : 5,
-                marginLeft : -40
+                marginTop: 12,
+                padding: 3 ,
+                height : '70%'
+                // marginLeft: -40,
               }}>
-            
-            <Text
-                style={{
-                  fontWeight: 'bold',
-                  color: '#F5313F',
-                  fontSize: 20,
-                  marginLeft: 20,
-                  color : '#6D6E9C'
-                }}>
-                Home
-              </Text>
-              <Text
-                style={{
-                  fontWeight: '100',
-                  color: '#F5313F',
-                  fontSize: 13,
-                  marginLeft: 20,
-                  color : '#6D6E9C'
+            <View style={{   width : '100%', alignItems : 'center'  , flexDirection : 'row' , marginTop : 15 , padding : 5   }}>
+              <Image  style={{width : 30 , height : 30 , borderRadius : 20}} source={orderconfirm}/>
+                  <Text  style={{ color : '#6D6E9C', fontSize : 22 , fontWeight : '700', marginLeft : 20 }}>Order Confirmed</Text>
+                  <Text  style={{ color : '#6D6E9C', fontSize : 12 , fontWeight : '700', marginLeft : 10 }}>11 : 41 AM</Text>
 
-                }}>
-                3728  Brand Road, Swift Current
-              </Text>
             </View>
-            <View
-              style={{
-                flexDirection: 'column',
-                // borderWidth: 2,
-                width: '80%',
-                marginTop: 20,
-                padding : 5,
-                marginLeft : -40
-              }}>
-            
-            <Text
-                style={{
-                  fontWeight: 'bold',
-                  color: '#F5313F',
-                  fontSize: 20,
-                  marginLeft: 20,
-                  color : '#6D6E9C'
-                }}>
-                + Add Delivery Instructions
-              </Text>
-              
+            <View style={{   width : '100%', alignItems : 'center'  , flexDirection : 'row' , marginTop : 15 , padding : 5  }}>
+              <Image  style={{width : 30 , height : 30 , borderRadius : 20}}  source={prepare}/>
+                  <Text  style={{ color : '#6D6E9C', fontSize : 22 , fontWeight : '700', marginLeft : 20 }}>Preparing ....</Text>
+                  <Text  style={{ color : '#6D6E9C', fontSize : 12 , fontWeight : '700', marginLeft : 10 }}>12 : 01 PM</Text>
+
             </View>
-            <View
-              style={{
-                flexDirection: 'column',
-                // borderWidth: 2,
-                width: '80%',
-                marginTop: 20,
-                padding : 5,
-                marginLeft : -40
-              }}>            
-            <Text
-                style={{
-                  fontWeight: 'bold',
-                  color: '#F5313F',
-                  fontSize: 20,
-                  marginLeft: 20,
-                  color : '#6D6E9C'
-                }}>
-                Contactless Delivery
-              </Text>
-
-              <Text
-                style={{
-                  fontWeight: '100',
-                  color: '#F5313F',
-                  fontSize: 13,
-                  marginLeft: 20,
-                  color : '#6D6E9C'
-
-                }}>
-                Rider will place order at your doorstep
-              </Text>
+            <View style={{   width : '100%', alignItems : 'center'  , flexDirection : 'row' , marginTop : 15 , padding : 5  }}>
+              <Image  style={{width : 35 , height : 35 }}  source={transit}/>
+                  <Text  style={{ color : '#6D6E9C', fontSize : 22 , fontWeight : '100', marginLeft : 20 }}>In Transit </Text>
+            </View>
+            <View style={{   width : '100%', alignItems : 'center'  , flexDirection : 'row' , marginTop : 15 , padding : 5  }}>
+              <Image  style={{width : 35 , height : 35 }}  source={deliver}/>
+                  <Text  style={{ color : '#6D6E9C', fontSize : 22 , fontWeight : '100', marginLeft : 20 }}>Delivered</Text>
             </View>
             
+            </View>
+
+       
           </View>
 
           {/* Topping  Div */}
 
-          <View
-            style={[onsheet.topping , styles.elevation]}>
-               <View
-              style={{
-                flexDirection: 'row',
-                // borderWidth: 2,
-                width: '85%',
-                marginTop: 20,
-                padding : 2,
-                alignSelf : 'center'
-              }}>
-              <Image style={{width: 30, height : 30}} source={payment} />
-              <Text
-                style={{
-                  fontWeight: 'bold',
-                  color: '#F5313F',
-                  fontSize: 25,
-                  marginLeft: 10,
-                }}>
-                Payment Method
-              </Text>
-              <Image style={{width: 30, height : 30 , borderRadius : 15 , marginLeft : 40}} source={editImg} />
-            </View>
 
-            {/** Visa Card */}
-            <View
-              style={{
-                flexDirection: 'row',
-                // borderWidth: 2,
-                width: '85%',
-                marginTop: 20,
-                padding : 2,
-                alignSelf : 'center',
-                alignItems  : 'center'
-              }}>
-              <Image style={{width: 30, height : 30}} source={visa} />
-              <Text
-                style={{
-                  fontWeight: '100',
-                  color: 'gray',
-                  fontSize: 15,
-                  marginLeft: 10,
-                  marginTop : 8
-                }}>
-                ....0145
-              </Text>
-              <Text
-                style={{
-                  fontWeight: '800',
-                  color: '#6D6E9C',
-                  fontSize: 20,
-                  marginLeft: 130,
-                  marginTop : 8
-                }}>
-                $20.00
-              </Text>         
-                 </View>
-                 <View
-              style={{
-                flexDirection: 'row',
-                // borderWidth: 2,
-                width: '85%',
-                // marginTop: 20,
-                padding : 2,
-                alignSelf : 'center',
-                alignItems  : 'center'
-              }}>
-              <Text
-                style={{
-                  fontWeight: '600',
-                  color: '#57C168',
-                  fontSize: 12,
-                  marginLeft: 10,
-                  marginTop : 8,
-                  backgroundColor : '#DEF3E1',
-                  padding: 5,
-                  borderRadius : 10
-                }}>
-                10% CASHBACK APPLIED
-              </Text>
-               
-                 </View>
-           
+
+          <View style={[onsheet.topping, styles.elevation]}>
+          <View style={{   width : '100%', alignItems : 'center'  , flexDirection : 'row' , marginTop : 5 , padding : 5 ,alignContent : 'center'  , paddingBottom : 10  }}>
+              <Image  style={{width : 65 , height : 65 }}  source={cashback}/>
+                  <Text  style={{ color : '#57C168', fontSize : 22 , fontWeight : '100', marginLeft : 10 , fontWeight : 'bold'  }}>Earned Cashback</Text>
+                  <Text  style={{ color : '#6D6E9C', fontSize : 15 , fontWeight : '100', marginLeft : -145  , marginTop : 40  }}>+ $2.00</Text>
+
+                  <View style={{backgroundColor : '#8cd494' , borderWidth : 0.5 , width : "20%", height : '135%' , marginLeft : 135  , borderTopRightRadius : 20 , borderBottomRightRadius : 20 , alignItems : 'center' , justifyContent : 'center' }}>
+                    <Image style={{width : 30, height : 30}} source={ahead} />
+                  </View>
+            </View>
+            
           </View>
 
           {/* Button Pizza Div */}
@@ -271,22 +161,23 @@ const onsheet = StyleSheet.create({
     // justifyContent: 'center',
     alignSelf: 'center',
     marginTop: -40,
-    height: '80%',
+    height: '110%',
     borderRadius: 30,
     shadowOpacity: 10,
     alignItems: 'center',
   },
-  topping :{
-    
-      backgroundColor: 'rgba(255, 255, 255, 0.8)',
-      width: '90%',
-      alignSelf: 'center',
-      height: '43%',
-      marginTop: 10,
-      marginBottom: 10,
-      borderRadius: 30,
-      // padding: 10,
-
-    
-  }
+  topping: {
+    backgroundColor: '#DEF3E1',
+    width: '90%',
+    alignSelf: 'center',
+    height: '23%',
+    marginTop: 10,
+    marginBottom: 10,
+    borderRadius: 20, 
+    borderColor : '#57C168',
+    borderWidth : 1,
+    flexDirection : 'row',
+     
+    // padding: 10, 
+  },
 });
