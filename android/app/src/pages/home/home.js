@@ -119,7 +119,7 @@ function HomeScreen({navigation}) {
 
       <View style={{justifyContent : 'center' , alignContent : 'center' , alignSelf : 'center'}} >
         <View style={styles.blurCard2}>
-            <Text 
+            <Text onPress={()=>navigation.navigate('Create01')}
             style={{
                 textAlign : 'center',
                 color : '#F5313F',

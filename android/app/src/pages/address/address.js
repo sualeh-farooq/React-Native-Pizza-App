@@ -163,7 +163,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   AddDetBottom: {
-    backgroundColor: 'yellow',
     flex: 1,
   },
   AddLine: {

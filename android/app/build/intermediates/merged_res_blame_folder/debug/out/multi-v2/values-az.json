@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.pizzaapplication.app-mergeDebugResources-27:/values-az/values-az.xml",
+            "outputFile": "com.pizzaapplication.app-mergeDebugResources-28:/values-az/values-az.xml",
             "map": [
                 {
                     "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\63a3df243d2d102452600006144a86df\\transformed\\core-1.7.0\\res\\values-az\\values-az.xml",

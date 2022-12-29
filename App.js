@@ -17,7 +17,11 @@ import {ReactSVG} from 'react';
 import HomeScreen from './android/app/src/pages/home/home';
 import AddressScreen from './android/app/src/pages/address/address';
 const customer = require('./android/app/src/main/assets/images/customer.png');
-
+import Create01 from './android/app/src/pages/create01/create';
+import Create02 from './android/app/src/pages/create01/create2';
+import Create03 from './android/app/src/pages/create01/create3';
+import ConfirmPizza from './android/app/src/pages/confirm/confirm';
+import OrderHistory from './android/app/src/pages/history/history';
 
 
 function ProfileScreen({navigation}) {
@@ -64,7 +68,6 @@ function DrawerMenu({navigation}) {
   var ArrowIcon = require('./android/app/src/main/assets/images/arrow.png');
   var SettingIcon = require('./android/app/src/main/assets/images/settings.png');
   var customerImg = require('./android/app/src/main/assets/images/customer.png');
-
   return (
     <View style={{flex: 1, flexDirection: 'column'}}>
       {/* A Upper Div */}
@@ -109,7 +112,7 @@ function DrawerMenu({navigation}) {
                 width: 35,
               }}></Image>
             <Text
-              onPress={() => navigation.navigate('Payment Screen')}
+              onPress={() => navigation.navigate('Confirm')}
               style={{
                 color: '#6D6E9C',
                 fontWeight: '400',
@@ -127,7 +130,7 @@ function DrawerMenu({navigation}) {
                 width: 30,
               }}></Image>
             <Text
-              onPress={() => navigation.navigate('Order Screen')}
+              onPress={() => navigation.navigate('History')}
               style={{
                 color: '#6D6E9C',
                 fontWeight: '400',
@@ -163,7 +166,6 @@ function DrawerMenu({navigation}) {
                 width: 25,
               }}></Image>
             <Text
-              onPress={() => navigation.navigate('Help Screen')}
               style={{
                 color: '#6D6E9C',
                 fontWeight: '400',
@@ -185,7 +187,6 @@ function DrawerMenu({navigation}) {
                 width: 25,
               }}></Image>
             <Text
-              onPress={() => navigation.navigate('Address')}
               style={{
                 color: '#6D6E9C',
                 fontWeight: '400',
@@ -212,7 +213,6 @@ function DrawerMenu({navigation}) {
                 marginTop: 4,
               }}></Image>
             <Text
-              onPress={() => navigation.navigate('Address')}
               style={{
                 color: '#6D6E9C',
                 fontWeight: '400',
@@ -232,16 +232,24 @@ const Drawer = createDrawerNavigator();
 
 export default function App() {
   var BasketImg =  require('./android/app/src/main/assets/images/check.png');
-
+  var homeImg = require('./android/app/src/main/assets/images/homehead.png');
   return (
     <NavigationContainer theme={MyTheme}>
-      <Drawer.Navigator initialRouteName="Address" drawerContent={DrawerMenu}>
+      <Drawer.Navigator initialRouteName="History" drawerContent={DrawerMenu}>
         <Drawer.Screen name="Home" component={HomeScreen} options={{title : "Deliver to Home" , headerStyle : {backgroundColor : '#fff'} , headerRight : ()=> (<Image source={BasketImg} style={{width : 25 , height : 25 , marginRight : 20 , opacity : 0.7}} ></Image> ) }} />
         <Drawer.Screen name="Address" component={AddressScreen} options={{title : "Address Details" , headerStyle : {backgroundColor : '#fff'} , headerRight : ()=> (<Image source={BasketImg} style={{width : 25 , height : 25 , marginRight : 20 , opacity : 0.7}} ></Image> ) }} />
         <Drawer.Screen name="Profile Screen" component={ProfileScreen} />
-        <Drawer.Screen name="Payment Screen" component={PaymentScreen} />
-        <Drawer.Screen name="Order Screen" component={OrderScreen} />
-        <Drawer.Screen name="Help Screen" component={HelpScreen} />
+        <Drawer.Screen name="Create01" component={Create01} options={{title : "Uncle John Pizza's" , headerTitleAlign : 'center' ,headerTitleStyle : {fontWeight : '100' , fontFamily : "Arial" , color : 'gray'}  ,  headerStyle : {backgroundColor : '#fff'} , headerRight : ()=> (<Image source={homeImg} style={{width : 25 , height : 25 , marginRight : 20 , opacity : 0.7}} ></Image> ) }} />
+        <Drawer.Screen name="Create02" component={Create02} options={{title : "Uncle John Pizza's" , headerTitleAlign : 'center' ,headerTitleStyle : {fontWeight : '100' , fontFamily : "Arial" , color : 'gray'}  ,  headerStyle : {backgroundColor : '#fff'} , headerRight : ()=> (<Image source={homeImg} style={{width : 25 , height : 25 , marginRight : 20 , opacity : 0.7}} ></Image> ) }} />
+        <Drawer.Screen name="Create03" component={Create03} options={{title : "Uncle John Pizza's" , headerTitleAlign : 'center' ,headerTitleStyle : {fontWeight : '100' , fontFamily : "Arial" , color : 'gray'}  ,  headerStyle : {backgroundColor : '#fff'} , headerRight : ()=> (<Image source={homeImg} style={{width : 25 , height : 25 , marginRight : 20 , opacity : 0.7}} ></Image> ) }} />
+        <Drawer.Screen name="Confirm" component={ConfirmPizza} options={{title : "Uncle John Pizza's" , headerTitleAlign : 'center' ,headerTitleStyle : {fontWeight : '100' , fontFamily : "Arial" , color : 'gray'}  ,  headerStyle : {backgroundColor : '#fff'} , headerRight : ()=> (<Image source={homeImg} style={{width : 25 , height : 25 , marginRight : 20 , opacity : 0.7}} ></Image> ) }} />
+        <Drawer.Screen name="History" component={OrderHistory} options={{title : "Uncle John Pizza's" , headerTitleAlign : 'center' ,headerTitleStyle : {fontWeight : '100' , fontFamily : "Arial" , color : 'gray'}  ,  headerStyle : {backgroundColor : '#fff'} , headerRight : ()=> (<Image source={homeImg} style={{width : 25 , height : 25 , marginRight : 20 , opacity : 0.7}} ></Image> ) }} />
+
+
+
+        {/* <Drawer.Screen name="Payment Screen" component={PaymentScreen} /> */}
+        {/* <Drawer.Screen name="Order Screen" component={OrderScreen} /> */}
+        {/* <Drawer.Screen name="Help Screen" component={HelpScreen} /> */}
       </Drawer.Navigator>
     </NavigationContainer>
   );

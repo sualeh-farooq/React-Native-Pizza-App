@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     // justifyContent: 'center',
     backgroundColor: '#eae9ef',
-    // flexDirection : 'row'
+    flexDirection : 'column'
   },
   greetContainer : {
     flex : 1,
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     // borderWidth : 2,
     // borderColor : 'red',
     // flex : 1, 
-    height : 130
+    height : 120
 
   },
   blurCard : {
